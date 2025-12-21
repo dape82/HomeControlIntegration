@@ -1,0 +1,25 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "HomeControl is already configured."
+        },
+        "step": {
+            "user": {
+                "description": "Enable the HomeControl REST API endpoint.",
+                "title": "HomeControl"
+            }
+        }
+    },
+    "options": {
+        "abort": {
+            "no_options": "There are no options for this integration."
+        },
+        "step": {
+            "init": {
+                "description": "There are no options for this integration.",
+                "title": "HomeControl"
+            }
+        }
+    },
+    "title": "HomeControl"
+}
