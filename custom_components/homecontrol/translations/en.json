@@ -1,25 +1,25 @@
 {
-    "config": {
-        "abort": {
-            "already_configured": "HomeControl is already configured."
-        },
-        "step": {
-            "user": {
-                "description": "Enable the HomeControl REST API endpoint.",
-                "title": "HomeControl"
-            }
+  "title": "HomeControl Dashboard Publisher",
+  "config": {
+    "abort": {
+      "already_configured": "HomeControl is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Home Control Settings",
+        "description": "This integration will provide a dashboard which will be used for your Home Control App on your watch .",
+        "data": {
+          "config_text": "Choose one of the following dashboards:"
         }
+      }
     },
-    "options": {
-        "abort": {
-            "no_options": "There are no options for this integration."
-        },
-        "step": {
-            "init": {
-                "description": "There are no options for this integration.",
-                "title": "HomeControl"
-            }
-        }
-    },
-    "title": "HomeControl"
+    "error": {
+      "no_dashboards": "No dashboards found. Create at least one Lovelace dashboard.",
+      "view_registration_failed": "Failed to register HomeControl HTTP view.",
+      "dashboard_not_found": "The requested dashboard was not found.",
+      "dashboard_not_allowed": "You are not allowed to access the requested dashboard."
+    }
+  }
 }

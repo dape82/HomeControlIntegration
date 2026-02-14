@@ -1,0 +1,22 @@
+{
+  "title": "HomeControl Dashboard Publisher",
+  "config": {
+    "abort": {
+      "already_configured": "HomeControl is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Home Control Settings",
+
+        "data": {
+          "config_text": "Choose your dashboard!"
+        }
+      }
+    },
+    "error": {
+      "no_dashboards": "No dashboards found. Create at least one Lovelace dashboard."
+    }
+  }
+}
