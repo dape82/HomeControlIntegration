@@ -68,7 +68,7 @@ class HomeControlDashboardView(HomeAssistantView):
             "dashboard_id": dashboard_id,
             "dashboard_title": label,
             "generated_at": dt_util.utcnow().isoformat(),
-            "sections": dashboards.get(str(dashboard_id), []),
+            "views": dashboards.get(str(dashboard_id), []),
         }
         return self.json(payload)
 
