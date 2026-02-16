@@ -3,7 +3,7 @@
 from __future__ import annotations
 from dataclasses import dataclass
 
-from HomeControlIntegration.custom_components.homecontrol.const import ERROR_VIEW_REGISTRATION_FAILED
+from .const import ERROR_VIEW_REGISTRATION_FAILED
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import ConfigEntryError
