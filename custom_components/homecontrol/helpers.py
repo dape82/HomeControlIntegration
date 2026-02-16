@@ -3,6 +3,8 @@ from typing import Any
 from homeassistant.helpers import entity_registry as er
 import re
 import logging
+import pprint
+from typing import Any
 
 logger = logging.getLogger(__name__)
 from homeassistant.components.lovelace import DOMAIN as LOVELACE_DOMAIN
@@ -45,7 +47,7 @@ async def async_get_dashboards(hass) -> dict[str, Any]:
             # Sections and cards
             sections: list[CardListType] = []
 
-            if viewType == "sections":
+            if viewType == "sections" or viewType is None:
                 for section_data in view_data.get("sections", []):
                     ui_sections = group_cards_into_sections(
                         section_data.get("cards", []), hass
@@ -145,9 +147,6 @@ def extract_entities_from_card(card: dict[str, Any]) -> set[str]:
     return entities
 
 
-from typing import Any
-
-
 def group_cards_into_sections(
     cards: list[dict[str, Any]], hass
 ) -> list[dict[str, Any]]:
@@ -162,8 +161,6 @@ def group_cards_into_sections(
     current_subtitle: str | None = None
     current_entities_list: list[dict[str, str]] = []
     current_entities_set: set[str] = set()
-    current_devices_list: list[str] = []
-    current_devices_set: set[str] = set()
 
     entity_reg = er.async_get(hass)
 
