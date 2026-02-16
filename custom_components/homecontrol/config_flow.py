@@ -18,8 +18,7 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         self._abort_if_unique_id_configured()
 
         # print translation title
-        translation = await async_get_translations(self.hass, self.hass.config.language, "title")
-        return self.async_create_entry(title=translation.get("component.homecontrol.title", DOMAIN), data={})
+        return self.async_create_entry(title="HomeControl Dashboard Publisher", data={})
 
     @staticmethod
     @callback

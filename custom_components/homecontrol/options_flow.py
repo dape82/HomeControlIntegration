@@ -1,5 +1,6 @@
 from __future__ import annotations
-from HomeControlIntegration.custom_components.homecontrol.const import (
+
+from .const import (
     ERROR_NO_DASHBOARDS,
 )
 from homeassistant.components.lovelace import DOMAIN as LOVELACE_DOMAIN
